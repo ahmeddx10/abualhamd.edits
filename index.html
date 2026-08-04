@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Ahmed | Video Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-timeline">
+    <div class="tl-track">
+      <div class="tl-bar v1"></div><div class="tl-bar v2"></div><div class="tl-bar v3"></div><div class="tl-bar v4"></div><div class="tl-bar v5"></div>
+    </div>
+    <div class="tl-playhead"></div>
+  </div>
+  <p class="loader-text mono">RENDERING<span class="dots">...</span></p>
+</div>
+
+<nav id="navbar">
+  <a class="nav-logo" href="#">AH<span class="accent">.</span></a>
+  <div class="nav-center">
+    <a href="#projects" data-i18n="nav_work">Work</a>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#process" data-i18n="nav_process">Process</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-picker">
+  <button class="lang-btn active" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="ar">AR</button>
+  <button class="lang-btn" data-lang="es">ES</button>
+  <button class="lang-btn" data-lang="de">DE</button>
+  <button class="lang-btn" data-lang="pt">PT</button>
+  <button class="lang-btn" data-lang="fr">FR</button>
+</div>
+    <button id="themeToggle" aria-label="Toggle theme"><span class="icon-sun">☀</span><span class="icon-moon">◑</span></button>
+    <a href="#contact" class="btn-nav" data-i18n="nav_cta">Book a Call</a>
+  </div>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projects" data-i18n="nav_work">Work</a>
+  <a href="#services" data-i18n="nav_services">Services</a>
+  <a href="#process" data-i18n="nav_process">Process</a>
+  <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"><div class="grid-overlay"></div><div class="noise-overlay"></div><div class="scanline"></div></div>
+  <div class="hero-content">
+    <div class="hero-tag mono" data-i18n="hero_tag">✦ Available for Projects</div>
+    <h1 class="hero-title">
+      <span class="line-clip" data-i18n="hero_line1">I Help Brands</span>
+      <span class="line-clip stroke-text" data-i18n="hero_line2">Turn Views</span>
+      <span class="line-clip" data-i18n="hero_line3">Into Customers</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">Through Short-Form Video Editing that stops the scroll, builds trust, and drives action.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary" data-i18n="hero_btn1">View My Work</a>
+      <a href="#contact" class="btn-ghost" data-i18n="hero_btn2">Book a Call →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-count="180">0</span><span>K+</span><small data-i18n="stat1">Views Generated</small></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-count="50">0</span><span>+</span><small data-i18n="stat2">Projects Done</small></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-count="24">0</span><span>h</span><small data-i18n="stat3">Avg. Delivery</small></div>
+    </div>
+  </div>
+  <div class="hero-reel">
+    <div class="reel-frame">
+      <div class="reel-inner">
+        <video
+  autoplay muted loop playsinline
+  style="width:100%;height:100%;
+  object-fit:cover">
+  <source src="assets/videos/showreel-test.mp4"
+    type="video/mp4">
+</video>
+<div class="reel-badge">Ahmed Hassan</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-line"></div><span class="mono" data-i18n="scroll_hint">scroll</span></div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>SHORT FORM</span><span class="accent-dot">✦</span><span>REELS</span><span class="accent-dot">✦</span><span>UGC ADS</span><span class="accent-dot">✦</span><span>REAL ESTATE</span><span class="accent-dot">✦</span><span>MOTION GRAPHICS</span><span class="accent-dot">✦</span><span>YOUTUBE</span><span class="accent-dot">✦</span><span>PODCAST</span><span class="accent-dot">✦</span><span>BRAND CONTENT</span><span class="accent-dot">✦</span>
+    <span>SHORT FORM</span><span class="accent-dot">✦</span><span>REELS</span><span class="accent-dot">✦</span><span>UGC ADS</span><span class="accent-dot">✦</span><span>REAL ESTATE</span><span class="accent-dot">✦</span><span>MOTION GRAPHICS</span><span class="accent-dot">✦</span><span>YOUTUBE</span><span class="accent-dot">✦</span><span>PODCAST</span><span class="accent-dot">✦</span><span>BRAND CONTENT</span><span class="accent-dot">✦</span>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">01</span>
+      <h2 data-i18n="proj_title">Featured Projects</h2>
+      <p data-i18n="proj_sub">Results speak louder than previews</p>
+    </div>
+    <div class="filter-tabs">
+      <button class="tab active" data-filter="all" data-i18n="filter_all">All</button>
+      <button class="tab" data-filter="reels" data-i18n="filter_reels">Reels</button>
+      <button class="tab" data-filter="ugc" data-i18n="filter_ugc">UGC Ads</button>
+      <button class="tab" data-filter="real-estate" data-i18n="filter_re">Real Estate</button>
+      <button class="tab" data-filter="youtube" data-i18n="filter_yt">YouTube</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<section id="before-after">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">02</span>
+      <h2 data-i18n="ba_title">Before / After</h2>
+      <p data-i18n="ba_sub">Drag to see the transformation</p>
+    </div>
+    <div class="ba-wrapper">
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-before">
+          <div class="ba-content">
+            <img src="assets/images/data/before.png" alt="Before"
+  style="width:100%;height:100%;
+  object-fit:cover"/>
+          </div>
+        </div>
+        <div class="ba-after">
+          <div class="ba-content">
+           <img src="assets/images/data/after.png" alt="After"
+  style="width:100%;height:100%;
+  object-fit:cover"/>
+  </div>
+        </div>
+        <div class="ba-divider" id="baDivider"><div class="ba-handle">⇔</div></div>
+      </div>
+      <div class="ba-metrics">
+        <div class="metric"><span class="metric-val accent">+340%</span><span data-i18n="m_retention">Retention Boost</span></div>
+        <div class="metric"><span class="metric-val accent">72%</span><span data-i18n="m_watch">Watch Rate</span></div>
+        <div class="metric"><span class="metric-val accent">180K</span><span data-i18n="m_views">Views</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">03</span>
+      <h2 data-i18n="serv_title">Services</h2>
+      <p data-i18n="serv_sub">What I deliver — and how</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">04</span>
+      <h2 data-i18n="proc_title">My Process</h2>
+      <p data-i18n="proc_sub">A clear system from footage to final cut</p>
+    </div>
+    <div class="process-timeline" id="processTimeline"></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">05</span>
+      <h2 data-i18n="price_title">Starting From</h2>
+      <p data-i18n="price_sub">Transparent pricing, zero surprises</p>
+    </div>
+    <div class="pricing-grid" id="pricingGrid"></div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">06</span>
+      <h2 data-i18n="test_title">Client Reviews</h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="section-header left-align">
+          <span class="section-num mono">07</span>
+          <h2 data-i18n="about_title">About Me</h2>
+        </div>
+        <p class="about-body" data-i18n="about_p1">Started as a graphic designer with an obsession for motion. Somewhere between a timeline and a color grade, I fell in love with video editing.</p>
+        <p class="about-body" data-i18n="about_p2">Now I help brands across Egypt and the Gulf transform raw footage into scroll-stopping content — Reels, UGC Ads, and short-form videos that actually convert.</p>
+        <div class="about-tech">
+          <div class="tech-item"><span class="mono">01</span><span>Premiere Pro</span></div>
+          <div class="tech-item"><span class="mono">02</span><span>DaVinci Resolve</span></div>
+          <div class="tech-item"><span class="mono">03</span><span>After Effects</span></div>
+          <div class="tech-item"><span class="mono">04</span><span>Photoshop</span></div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-card">
+          <div class="about-photo-placeholder" style="height:220px;padding:0;overflow:hidden;"><img src="assets/images/data/banner.jpg" alt="Ahmed" style="width: 1920px;;height: 1080px;;object-fit:cover;object-position:center;display:block;"/></div>
+          <div class="desk-specs">
+            <h4 class="mono" data-i18n="desk_title">MY EDITING DESK</h4>
+            <div class="spec-row"><span class="mono spec-key">CPU</span><span>Ryzen 5 2600</span></div>
+            <div class="spec-row"><span class="mono spec-key">GPU</span><span>GTX 1060 3GB</span></div>
+            <div class="spec-row"><span class="mono spec-key">RAM</span><span>16GB Dual Channel</span></div>
+            <div class="spec-row"><span class="mono spec-key">CAM</span><span>iPhone 11 Pro</span></div>
+            <div class="spec-row"><span class="mono spec-key">NLE</span><span>Premiere / Resolve</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num mono">08</span>
+      <h2 data-i18n="faq_title">FAQ</h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <div class="section-header left-align">
+          <span class="section-num mono">09</span>
+          <h2 data-i18n="contact_title">Let's Work<br/>Together</h2>
+        </div>
+        <p data-i18n="contact_sub">Ready to turn your footage into results? Drop me a message or book a quick call.</p>
+        <div class="contact-links">
+  <a href="https://www.instagram.com/abualhamd_edits/" class="contact-link" target="_blank">
+    <span class="contact-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </span>
+    <span class="mono">Instagram</span>
+  </a>
+
+  <a href="https://www.youtube.com/@abualhamd_edits" class="contact-link" target="_blank">
+    <span class="contact-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+      </svg>
+    </span>
+    <span class="mono">YouTube</span>
+  </a>
+
+  <a href="https://wa.me/message/NZ7ZKQQCFU2IA1" class="contact-link" target="_blank">
+    <span class="contact-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+      </svg>
+    </span>
+    <span class="mono">WhatsApp</span>
+  </a>
+
+  <a href="mailto:contact.abualhamd@gmail.com" class="contact-link">
+    <span class="contact-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.910 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+      </svg>
+    </span>
+    <span class="mono">Email</span>
+  </a>
+</div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label class="mono" data-i18n="form_name">YOUR NAME</label><input type="text" placeholder="John Doe"/></div>
+          <div class="form-group"><label class="mono" data-i18n="form_email">YOUR EMAIL</label><input type="email" placeholder="hello@brand.com"/></div>
+          <div class="form-group">
+            <label class="mono" data-i18n="form_service">SERVICE NEEDED</label>
+            <select>
+              <option data-i18n="serv_opt1">Short Form Editing</option>
+              <option data-i18n="serv_opt2">Real Estate Reels</option>
+              <option data-i18n="serv_opt3">UGC Ads</option>
+              <option data-i18n="serv_opt4">YouTube Editing</option>
+              <option data-i18n="serv_opt5">Motion Graphics</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="mono" data-i18n="form_msg">MESSAGE</label><textarea placeholder="Tell me about your project..." rows="4"></textarea></div>
+          <button type="submit" class="btn-primary full-w" data-i18n="form_send">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="nav-logo" href="#">AH<span class="accent">.</span></a>
+    <p class="mono footer-copy">© 2026 Ahmed — Video Editor & Content Creator</p>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/abualhamd_edits/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg></a>
+      <a href="https://www.youtube.com/@abualhamd_edits" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+      </svg></a>
+      <a href="https://wa.me/message/NZ7ZKQQCFU2IA1" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+      </svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
