@@ -35,10 +35,10 @@ const portfolioData = {
   ],
 
   testimonials: [
-    { name:"Sarah K.", role:"Real Estate Agent", text:"Ahmed delivered a reel that got 180K views in 3 days. Our listings literally sold faster after that.", avatar:"SK" },
-    { name:"Mohamed A.", role:"Brand Owner", text:"Best investment I made. The UGC ad he edited has a 4.2 ROAS — still running after 2 months.", avatar:"MA" },
-    { name:"Lena V.", role:"Content Creator", text:"Fast, professional, and he actually understands retention psychology. My views doubled in 2 weeks.", avatar:"LV" },
-    { name:"Abdullah A.", role:"Engeiner", text:"Fast, professional, and he actually understands retention psychology. My views doubled in 2 weeks.", avatar:"AA" },
+    { name:"Mahmoud S.", role:"Content Creator", text:"ممتاز و متعاون و هتعامل معاه مرة أخرى ان شاء الله", avatar:"MS" },
+    { name:"وسيم م.", role:"Engineer", text:"انسان متفهم و باله طويل و مستمرين بالعمل معاه ان شاء الله.", avatar:"WS" },
+    { name:"Thaer A.", role:"App Developer", text:"مصمم جيد في التعامل تنفيذ المطلوب بكل احترافيةانصح بالتعامل معه", avatar:"TA" },
+    { name:"قبة ا.", role:"Saudian High School", text:"لديه القدرة على تلبية كل متطلبات العمل يسرنا العمل معاً في مشروعات قادمة مستقبلاً", avatar:"QB" },
   ],
 
   faq: [
