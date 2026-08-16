@@ -12,16 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     animateHeroIn();
   }, 2200);
 
-  // ── THEME TOGGLE ────────────────────────────
-  const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  themeToggle.addEventListener('click', () => {
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
+  // ── THEME ────────────────────────────────────
+  document.documentElement.setAttribute('data-theme', 'dark');
 
   // ── NAV SCROLL ──────────────────────────────
   const navbar = document.getElementById('navbar');
@@ -167,9 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── TESTIMONIALS ────────────────────────────
   const tt = document.getElementById('testimonialsTrack');
   if (tt) {
-    tt.innerHTML = portfolioData.testimonials.map(t => `
+    tt.innerHTML = portfolioData.testimonials.map(t => {
+      const rating = Math.max(0, Math.min(5, t.rating || 5));
+      const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+      return `
       <div class="testimonial-card">
-        <div class="test-stars">★★★★★</div>
+        <div class="test-stars" aria-label="${rating} out of 5 stars">${stars}</div>
         <p class="test-text">"${t.text}"</p>
         <div class="test-author">
           <div class="test-avatar">${t.avatar}</div>
@@ -179,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   // ── FAQ — dynamic per language ──────────────
@@ -189,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const t = translations[lang] || translations.en;
     const faqs = t.faq || [];
     fl.innerHTML = faqs.map((f, i) => `
-      <div class="faq-item">
+      <div class="faq-item visible">
         <button class="faq-q" data-idx="${i}">
           <span>${f.q}</span>
           <span class="faq-icon">+</span>
@@ -275,13 +271,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!name || !email || !msg) return;
 
-      const subject = encodeURIComponent(`New Project Request — ${service}`);
+      const subject = encodeURIComponent('New Project Inquiry');
       const body    = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${msg}`
       );
 
-      // ⚠️ غيّر YOUR@EMAIL.COM بإيميلك الحقيقي
-      window.location.href = `mailto:YOUR@EMAIL.COM?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:contact.abualhamd@gmail.com?subject=${subject}&body=${body}`;
 
       const btn = form.querySelector('button[type=submit]');
       btn.textContent = '✓ Opening Email...';

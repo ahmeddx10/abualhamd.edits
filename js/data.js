@@ -35,10 +35,10 @@ const portfolioData = {
   ],
 
   testimonials: [
-    { name:"Mahmoud S.", role:"Content Creator", text:"ممتاز و متعاون و هتعامل معاه مرة أخرى ان شاء الله", avatar:"MS" },
-    { name:"وسيم م.", role:"Engineer", text:"انسان متفهم و باله طويل و مستمرين بالعمل معاه ان شاء الله.", avatar:"WS" },
-    { name:"Thaer A.", role:"App Developer", text:"مصمم جيد في التعامل تنفيذ المطلوب بكل احترافيةانصح بالتعامل معه", avatar:"TA" },
-    { name:"قبة ا.", role:"Saudian High School", text:"لديه القدرة على تلبية كل متطلبات العمل يسرنا العمل معاً في مشروعات قادمة مستقبلاً", avatar:"QB" },
+    { name:"Mahmoud S.", role:"Content Creator", text:"ممتاز و متعاون و هتعامل معاه مرة أخرى ان شاء الله", avatar:"MS", rating:5 },
+    { name:"وسيم م.", role:"Engineer", text:"انسان متفهم و باله طويل و مستمرين بالعمل معاه ان شاء الله.", avatar:"WS", rating:5 },
+    { name:"Thaer A.", role:"App Developer", text:"مصمم جيد في التعامل تنفيذ المطلوب بكل احترافيةانصح بالتعامل معه", avatar:"TA", rating:5 },
+    { name:"قبة ا.", role:"Saudian High School", text:"لديه القدرة على تلبية كل متطلبات العمل يسرنا العمل معاً في مشروعات قادمة مستقبلاً", avatar:"QB", rating:5 },
   ],
 
   faq: [
