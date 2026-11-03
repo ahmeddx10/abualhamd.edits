@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── LOADER ──────────────────────────────────
-  // Hide once the page has loaded (min 900ms so the intro reads), max 3s
+  // Hide once the page has loaded (min 400ms so it doesn't flash), max 1.5s
   const loader = document.getElementById('loader');
   const loaderStart = Date.now();
   let loaderDone = false;
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
     animateHeroIn();
   }
-  window.addEventListener('load', () => setTimeout(hideLoader, Math.max(0, 900 - (Date.now() - loaderStart))));
-  setTimeout(hideLoader, 3000);
+  window.addEventListener('load', () => setTimeout(hideLoader, Math.max(0, 400 - (Date.now() - loaderStart))));
+  setTimeout(hideLoader, 1500);
 
   const getLang = () => document.documentElement.getAttribute('data-lang') || 'en';
   const t = key => (translations[getLang()] || translations.en)[key] || translations.en[key];

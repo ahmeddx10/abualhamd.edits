@@ -7,6 +7,7 @@ const portfolioData = {
 
   // Each project lives in assets/work/<slug>/ with poster.jpg, preview.mp4 (hover loop) and 1080/720/480.mp4.
   // cat = reels | podcast | youtube | story | color   ·   v = vertical (9:16)   ·   dur = seconds
+  // maxQ = highest rendition that exists (default 1080) — long reels stop at 720 to stay under GitHub's file-size limit
   // The order here is the order on the site — strongest work first.
   projects: [
     { slug:"italy-sound-design",  cat:"story",   v:false, dur:34,
@@ -23,7 +24,7 @@ const portfolioData = {
       en:{ title:"Gaming Intro", client:"YouTube gaming preview" },       ar:{ title:"إنترو جيمنج", client:"بريفيو يوتيوب جيمنج" } },
     { slug:"saba-travel-vlog",    cat:"youtube", v:false, dur:38,
       en:{ title:"Saba City", client:"Travel vlog" },                     ar:{ title:"مدينة صبا", client:"فلوج سفر" } },
-    { slug:"chicken-wings",       cat:"reels",   v:true,  dur:134,
+    { slug:"chicken-wings",       cat:"reels",   v:true,  dur:134, maxQ:720,
       en:{ title:"Chicken Wings", client:"Cooking reel" },                ar:{ title:"تشيكن وينجز", client:"ريل طبخ" } },
     { slug:"football-intro",      cat:"youtube", v:false, dur:40,
       en:{ title:"Football Story Intro", client:"YouTube intro" },        ar:{ title:"إنترو حكاية كروية", client:"إنترو يوتيوب" } },
@@ -33,13 +34,13 @@ const portfolioData = {
       en:{ title:"Calm Reflections", client:"Quotes video" },             ar:{ title:"تأملات هادئة", client:"فيديو اقتباسات" } },
     { slug:"podcast-clip",        cat:"podcast", v:true,  dur:16,
       en:{ title:"Podcast Clip", client:"Talk-show short" },              ar:{ title:"كليب بودكاست", client:"شورت توك شو" } },
-    { slug:"magret-de-canard",    cat:"reels",   v:true,  dur:108,
+    { slug:"magret-de-canard",    cat:"reels",   v:true,  dur:108, maxQ:720,
       en:{ title:"Magret de Canard", client:"Cooking reel" },             ar:{ title:"ماجريه دي كانار", client:"ريل طبخ" } },
     { slug:"football-reel",       cat:"reels",   v:true,  dur:42,
       en:{ title:"Football Reel", client:"Sports short-form" },           ar:{ title:"ريل كورة", client:"شورت فورم رياضي" } },
     { slug:"raw-color-grading",   cat:"color",   v:false, dur:15,
       en:{ title:"Raw → Graded", client:"Color grading" },                ar:{ title:"من الخام للتلوين", client:"تلوين" } },
-    { slug:"t-bone-steak",        cat:"reels",   v:true,  dur:167,
+    { slug:"t-bone-steak",        cat:"reels",   v:true,  dur:167, maxQ:720,
       en:{ title:"T-Bone Steak", client:"Cooking reel" },                 ar:{ title:"ستيك تي بون", client:"ريل طبخ" } },
     { slug:"color-before-after",  cat:"color",   v:false, dur:4,
       en:{ title:"Grade: Before / After", client:"Color grading" },       ar:{ title:"التلوين: قبل / بعد", client:"تلوين" } },

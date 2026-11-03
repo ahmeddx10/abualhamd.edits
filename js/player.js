@@ -39,7 +39,8 @@
     const need = Math.min(stage.clientWidth, stage.clientHeight) * (window.devicePixelRatio || 1) * 1.6;
     return [480, 720, 1080].find(q => q >= need) || 1080;
   }
-  const resolved = () => quality === 'auto' ? Math.min(autoQuality(), autoCap || 1080) : quality;
+  const cap = () => (project && project.maxQ) || 1080;   // highest rendition this video has
+  const resolved = () => Math.min(quality === 'auto' ? Math.min(autoQuality(), autoCap || 1080) : quality, cap());
   const srcFor = (p, q) => `assets/work/${p.slug}/${q}.mp4`;
 
   // ── OPEN / CLOSE ──────────────────────────
@@ -232,7 +233,7 @@
   const looping = () => vp.classList.contains('looping');
   function renderMenu() {
     const cur = resolved();
-    const qText = quality === 'auto' ? `${tr('vp_auto')} (${cur}p)` : `${quality}p`;
+    const qText = quality === 'auto' ? `${tr('vp_auto')} (${cur}p)` : `${cur}p`;
     const sText = speed === 1 ? tr('vp_normal') : speed + '×';
     if (panel === 'main') {
       menu.innerHTML =
@@ -242,12 +243,12 @@
     } else if (panel === 'quality') {
       menu.innerHTML = `<button class="vp-menu-back" data-panel="main">‹ ${tr('vp_quality')}</button>` +
         `<button data-q="auto" class="${quality === 'auto' ? 'active' : ''}">${tr('vp_auto')} <small>${cur}p</small></button>` +
-        QUALITIES.map(q => `<button data-q="${q}" class="${quality === q ? 'active' : ''}">${q}p${q === 1080 ? ' <small>HD</small>' : ''}</button>`).join('');
+        QUALITIES.filter(q => q <= cap()).map(q => `<button data-q="${q}" class="${quality !== 'auto' && resolved() === q ? 'active' : ''}">${q}p${q === 1080 ? ' <small>HD</small>' : ''}</button>`).join('');
     } else {
       menu.innerHTML = `<button class="vp-menu-back" data-panel="main">‹ ${tr('vp_speed')}</button>` +
         SPEEDS.map(s => `<button data-speed="${s}" class="${s === speed ? 'active' : ''}">${s === 1 ? tr('vp_normal') : s + '×'}</button>`).join('');
     }
-    $('vpQualityLabel').textContent = quality === 'auto' ? 'AUTO' : `${quality}p`;
+    $('vpQualityLabel').textContent = quality === 'auto' ? 'AUTO' : `${resolved()}p`;
   }
   const renderQualityMenu = renderMenu;
   menu.addEventListener('click', e => {
